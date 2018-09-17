@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import data from './users'
+import data from './users.json'
 
 export class AutoComplete extends Component {
 
@@ -9,17 +9,15 @@ export class AutoComplete extends Component {
     }
 
     onChangeHandler = (val) => {
-        console.log('hi there',data);
+        console.log('hi there', data);
         //display data that starts with val or contains val
         const res = this.selectData(val);
-        console.log('res',res);
+        console.log('res', res);
     }
 
     selectData = (v) => {
-        //console.log(users);
-        // const fil = users.filter(u => u.name.startsWith(v))
-        // console.log(fil);
-        // return fil.map(u => u.name)
+        const ret = data.filter(u => u.name.startsWith(v))
+        return ret;
     }
 
     render() {
