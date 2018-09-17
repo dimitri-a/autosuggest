@@ -12,6 +12,7 @@ export class AutoComplete extends Component {
         console.log('hi there', data);
         //display data that starts with val or contains val
         const res = this.selectData(val);
+        this.setState({data:res})
         console.log('res', res);
     }
 
