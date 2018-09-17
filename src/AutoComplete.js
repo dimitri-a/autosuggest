@@ -17,7 +17,7 @@ export class AutoComplete extends Component {
     }
 
     selectData = (v) => {
-        const ret = data.filter(u => u.name.startsWith(v))
+        const ret = data.filter(u => u.name.toLowerCase().startsWith(v))
         return ret;
     }
 
